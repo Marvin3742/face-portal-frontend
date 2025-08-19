@@ -1,7 +1,7 @@
 import "../css/home.css"
 import faceShape from "../Images/faceShape.jpeg"
 import ImageCard from "../Components/imageCard"
-import { useState } from "react"
+import { useState, useEffect} from "react"
 import { generateImage } from "../Services/api"
 
 
@@ -21,6 +21,12 @@ function Home() {
     isBackward,
     userImage
   }
+
+  const scrollToMain = () => {
+    document.querySelector('.home-container').scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  };
 
   const handleFileChange = (e) => {
     const file = e.target.files[0]
@@ -61,9 +67,27 @@ function Home() {
         setError("No errors detected")
     }
 }
+  
 
 
   return (
+    <>
+    <section className="home-hero-section">
+    <div className="hero-shape shape-1"></div>
+    <div className="hero-shape shape-2"></div>
+    <div className="hero-shape shape-3"></div>
+    <div className="hero-shape shape-4"></div>
+    
+    <div className="home-hero-content">
+      <h1 className="home-hero-title">Face Portal</h1>
+      <p className="home-hero-subtitle">
+        Step through time and see yourself at any age with the power of AI
+      </p>
+      <button className="home-hero-cta" onClick={scrollToMain}>
+        Enter the Portal
+      </button>
+    </div>
+  </section>
     <div className="home-container">
       {isUploaded ? (
         <>
@@ -95,11 +119,11 @@ function Home() {
           <div className="intro">
             <section className="intro-section">
             <h1 className="intro-title">
-              See yourself at any age with AI!
+              Upload a photo and choose your destination!
             </h1>
             </section>
             <label className="upload-btn">
-              Upload a photo
+              Upload Image
               <input
                 type="file"
                 accept=".jpg,.jpeg,.png"
@@ -113,6 +137,7 @@ function Home() {
         </>
       )}
     </div>
+    </>
   )  
 }
 

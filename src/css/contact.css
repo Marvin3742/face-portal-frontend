@@ -14,18 +14,19 @@
   padding: 40px 0;
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 50px;
+  background: linear-gradient(135deg, #3c59d8 0%, #a86de3 50%, #ce18e2 100%);
 }
 
 .page-title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #222;
+  color: #ffffff;
 }
 
 .page-subtitle {
   font-size: 18px;
-  color: #666;
+  color: #ffe3e3;
   margin: 0;
   font-weight: 300;
 }

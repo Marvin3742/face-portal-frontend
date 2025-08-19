@@ -13,18 +13,19 @@
   padding: 60px 0;
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 40px;
+  background: linear-gradient(135deg, #3c59d8 0%, #a86de3 50%, #ce18e2 100%);
 }
 
 .main-title {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #222;
+  color: #ffffff;
 }
 
 .subtitle {
   font-size: 18px;
-  color: #666;
+  color: #ffe3e3;
   font-weight: 300;
 }
 
@@ -39,7 +40,7 @@
   flex: 0 0 250px;
   border-right: 1px solid #e0e0e0;
   padding-right: 20px;
-  position: sticky;
+  position: relative;
   top: 20px;
   height: fit-content;
 }

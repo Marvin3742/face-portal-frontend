@@ -43,7 +43,7 @@
   }
   
   .upload-btn:hover {
-    background-color: #4338ca;
+    background-color: #317dff;
   }
   
   .upload-btn:active {
@@ -192,4 +192,65 @@
     font-size: 13px;
   }
 }
+
+   /* Hero Section Styles */
+   .home-hero-section {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #3c59d8 0%, #a86de3 50%, #ce18e2 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .home-hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  .home-hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #fff, #e0e7ff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .home-hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  .home-hero-cta {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .home-hero-cta:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
 
