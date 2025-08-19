@@ -1,5 +1,5 @@
 import { useState } from "react"
-import marvinPfp from "../Images/marvin_pfp.jpg"
+import marvinPfp from "../Images/marvin_pfp.JPG"
 import "../css/contact.css"
 
 function Contact(){
