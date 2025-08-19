@@ -1,0 +1,11 @@
+.footer {
+    text-align: center;           /* Center the text */
+    padding: 1rem 0;              /* Vertical spacing */
+    background-color: #f8f8f8;    /* Light gray background */
+    color: #555;                  /* Dark gray text */
+    font-size: 0.9rem;            /* Slightly smaller text */
+    border-top: 1px solid #ddd;   /* Optional top border */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
