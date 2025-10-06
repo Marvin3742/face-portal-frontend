@@ -100,8 +100,8 @@ function Home() {
                         value={selectedTime}
                         onChange={(e) => (setSelectedTime(e.target.value))}>
                     <option value="">Time</option>
-                    <option value="10">10 years</option>
-                    <option value="20">20 years</option>
+                    <option value= "2">10 years</option>
+                    <option value="4">20 years</option>
                 </select>
             </div>
             <div className="button-container">
