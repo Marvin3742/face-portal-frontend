@@ -18,3 +18,10 @@ This project was created to learn React and dive deeper into ML/DL. The goal is 
 
 - **Frontend:** React + Vite
 - **Deployment:** TBD
+  
+![Hero page](images/faceportal1.pdf)
+![Image upload](images/faceportal2.pdf)
+![Age forward](images/faceportal3.pdf)
+![Age backward](images/faceportal4.pdf)
+
+
