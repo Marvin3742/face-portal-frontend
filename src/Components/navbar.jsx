@@ -24,7 +24,7 @@ function Navbar() {
         <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>[HOME]</Link>
         <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>[ABOUT]</Link>
         <Link to="/contact" className="nav-link" onClick={() => setIsOpen(false)}>[HELP & CONTACT]</Link>
-        <Link to="/login" className="nav-link" onClick={() => setIsOpen(false)}>[SIGN IN/UP]</Link>
+        {/* <Link to="/login" className="nav-link" onClick={() => setIsOpen(false)}>[SIGN IN/UP]</Link> */}
       </div>
 
     </nav>

@@ -1,18 +1,14 @@
 export const generateImage = async (configs) => {
   const { selectedTime, isForward, isBackward, userImage } = configs;
-
-  // Ensure it's an integer
   const timeValue = parseInt(selectedTime, 10);
 
-  // Decide direction — example logic, adjust if needed
   let ageFactor = 0;
   if (isForward) ageFactor = timeValue;
   else if (isBackward) ageFactor = -timeValue;
 
-  // Prepare FormData
   const formData = new FormData();
-  formData.append("file", userImage);        // File object
-  formData.append("age_factor", ageFactor);  // Integer value
+  formData.append("file", userImage);
+  formData.append("age_factor", ageFactor);
 
   try {
     const response = await fetch("http://localhost:8000/generate", {
@@ -21,16 +17,50 @@ export const generateImage = async (configs) => {
     });
 
     if (!response.ok) {
-      throw new Error(`Server error: ${response.statusText}`);
+      let errorMsg = `Server error: ${response.status}`;
+      try {
+        // Try to parse backend's JSON error
+        const errorData = await response.json();
+        if (errorData.message) {
+          errorMsg = errorData.message;
+        }
+      } catch {
+        // fallback — probably a binary response, not JSON
+      }
+      throw new Error(errorMsg);
     }
 
-    // Get the image blob back from FastAPI
     const blob = await response.blob();
     const imageUrl = URL.createObjectURL(blob);
-
     return imageUrl;
+
   } catch (error) {
     console.error("Error generating image:", error);
+    throw error;  // so the UI can display it
+  }
+};
+
+
+export const submitReview = async (rating, message) => {
+  try {
+    const formData = new FormData();
+    formData.append("rating", rating);
+    formData.append("message", message);
+
+    const response = await fetch("http://localhost:8000/review", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const err = await response.json();
+      throw new Error(err.message || "Failed to send review");
+    }
+
+    const data = await response.json();
+    return data.message;
+  } catch (error) {
+    console.error("Error submitting review:", error);
     throw error;
   }
 };

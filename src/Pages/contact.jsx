@@ -17,7 +17,7 @@ function Contact(){
 
         {
             question: "What about signed-in users?",
-            answer: "Our gallery feature allows signed-in users to save their generated images to their account. Users have the right to delete their images at any time from our database. "
+            answer: "Our gallery feature allows signed-in users to save their generated images to their account. Users have the right to delete their images at any time from our database. (Feature coming soon!)"
         },
         {
             question: "What photo formats are supported?",
@@ -37,7 +37,7 @@ function Contact(){
         },
         {
             question: "Why doesn't my result look realistic?",
-            answer: "Several factors can affect quality: photo lighting, angle, resolution, or facial obstructions. Try using a clear, well-lit, front-facing photo for best results."
+            answer: "Several factors can affect quality: photo lighting, angle, resolution, or facial obstructions. For the best results we strongly recommend uploading a high quality front facing selfie free of any glasses or hats."
         },
     ]
 

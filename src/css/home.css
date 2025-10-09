@@ -76,7 +76,7 @@
   
 
 
-.image-containter {
+.image-container {
   display: flex;
   gap: 20px; /* space between the two images */
   flex-wrap: wrap; /* allows wrapping on small screens */
@@ -84,7 +84,7 @@
   margin-top: 50px;
 }
 
-.image-containter .image-card {
+.image-container .image-card {
   width: 300px;       /* fixed width for both images */
   height: 300px;      /* fixed height for both images */
   overflow: hidden;   /* hide any overflow */
@@ -253,4 +253,91 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 
+.loading-indicator {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
 
+.post-actions {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.download-btn,
+.generate-another-btn,
+.submit-review-btn {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.download-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.generate-another-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.download-btn:hover {
+  background-color: #43a047;
+}
+
+.generate-another-btn:hover {
+  background-color: #0069d9;
+}
+
+.review-section {
+  margin-top: 2rem;
+}
+
+.star-rating {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.star {
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.review-form textarea {
+  width: 80%;
+  height: 80px;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.error-message {
+  text-align: center;
+  background-color: #ffe6e6;
+  color: #d8000c;
+  border: 1px solid #d8000c;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px auto;
+  width: 80%;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
