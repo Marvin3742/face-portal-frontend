@@ -11,7 +11,7 @@ export const generateImage = async (configs) => {
   formData.append("age_factor", ageFactor);
 
   try {
-    const response = await fetch("http://localhost:8000/generate", {
+    const response = await fetch("https://r7e26yh8attznp-8000.proxy.runpod.net/generate", {
       method: "POST",
       body: formData,
     });
