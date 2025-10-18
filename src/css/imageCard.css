@@ -1,15 +1,15 @@
 .image-card {
     display: flex;
-    justify-content: center;  /* Horizontal center */
-    align-items: center;      /* Vertical center */
-    height: 50vh;            /* Full viewport height */
-    margin-top: 0; /* remove any top margin */
+    justify-content: center;  
+    align-items: center;      
+    height: 50vh;           
+    margin-top: 0; 
   }
   
   .image-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* scales & crops image to fill container */
+    object-fit: cover;   
     display: block;
   }
   

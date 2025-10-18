@@ -234,15 +234,15 @@
 .links {
   display: block;
   margin-top: 4px;
-  color: #6a6363; /* LinkedIn blue-ish */
+  color: #6a6363; 
   text-decoration: none;
   font-size: 0.90rem;
   transition: color 0.3s ease, text-decoration 0.3s ease;
-  word-break: break-word; /* prevents long URLs from overflowing */
+  word-break: break-word; /
 }
 
 .links:hover {
-  color: #005582; /* darker blue on hover */
+  color: #005582;
   text-decoration: underline;
 }
 

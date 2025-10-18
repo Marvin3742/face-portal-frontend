@@ -1,13 +1,13 @@
 
 .home-container {
     display: flex;
-    flex-direction: column; /* stack intro + image vertically */
-    align-items: center;    /* horizontal centering */
-    justify-content: center; /* vertical centering */
-    min-height: 100vh;       /* fill the viewport height */
-    gap: 5px;               /* space between intro and image */
-    text-align: center;      /* center text inside intro */
-    padding: 20px;           /* small padding for mobile */
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    min-height: 100vh;       
+    gap: 5px;               
+    text-align: center;     
+    padding: 20px;           
     box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: center;
@@ -20,7 +20,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-bottom: 25px; /* decrease space below intro */
+    margin-bottom: 25px; 
   }
   .intro-title {
     font-size: 40px;
@@ -32,7 +32,7 @@
   .upload-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #000000; /* indigo-600 */
+    background-color: #000000; 
     color: white;
     font-size: 16px;
     font-weight: 600;
@@ -61,7 +61,7 @@
 
   @media (max-width: 600px) {
     .intro h1 {
-      font-size: 1.5rem; /* smaller heading */
+      font-size: 1.5rem; 
     }
   
     .upload-btn {
@@ -70,7 +70,7 @@
     }
   
     .image-card img {
-      width: 90%; /* make image smaller on mobile */
+      width: 90%; 
     }
   }
   
@@ -78,16 +78,16 @@
 
 .image-container {
   display: flex;
-  gap: 20px; /* space between the two images */
-  flex-wrap: wrap; /* allows wrapping on small screens */
-  justify-content: center; /* center the images horizontally */
+  gap: 20px; 
+  flex-wrap: wrap; 
+  justify-content: center; 
   margin-top: 50px;
 }
 
 .image-container .image-card {
-  width: 300px;       /* fixed width for both images */
-  height: 300px;      /* fixed height for both images */
-  overflow: hidden;   /* hide any overflow */
+  width: 300px;      
+  height: 300px;     
+  overflow: hidden;   
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -161,6 +161,7 @@
   display: flex;
   justify-content: center;
   margin-top: 16px;
+  flex-wrap: nowrap;
 }
 
 .generate-btn {
@@ -267,32 +268,58 @@
 
 .download-btn,
 .generate-another-btn,
+
 .submit-review-btn {
-  margin: 0.5rem;
-  padding: 0.6rem 1.2rem;
+  background: #333;
   border: none;
-  border-radius: 10px;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease;
+}
+
+.button-container2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 16px; 
+  align-items: stretch; 
 }
 
 .download-btn {
-  background-color: #4caf50;
+  background-color: #3c59d8;
   color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 8px;
+  white-space: nowrap; 
+  min-height: 48px; 
 }
 
 .generate-another-btn {
-  background-color: #007bff;
+  background-color: #ce18e2;
   color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 16px;
+  white-space: nowrap; 
+  min-height: 48px; 
 }
-
 .download-btn:hover {
-  background-color: #43a047;
+  background-color: #2241ca;
 }
 
 .generate-another-btn:hover {
-  background-color: #0069d9;
+  background-color: #a108b3;
 }
 
 .review-section {
@@ -336,6 +363,48 @@
   font-weight: 500;
   animation: fadeIn 0.3s ease-in-out;
 }
+
+.learn-more-link {
+  color: #181717;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.learn-more-link:hover {
+  color: #205c99;
+}
+
+
+.tips-section {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f8fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tips-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.tips-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.tips-section li {
+  margin-bottom: 0.4rem;
+}
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }

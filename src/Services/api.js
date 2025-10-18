@@ -19,13 +19,12 @@ export const generateImage = async (configs) => {
     if (!response.ok) {
       let errorMsg = `Server error: ${response.status}`;
       try {
-        // Try to parse backend's JSON error
         const errorData = await response.json();
         if (errorData.message) {
           errorMsg = errorData.message;
         }
       } catch {
-        // fallback — probably a binary response, not JSON
+        
       }
       throw new Error(errorMsg);
     }
@@ -36,7 +35,7 @@ export const generateImage = async (configs) => {
 
   } catch (error) {
     console.error("Error generating image:", error);
-    throw error;  // so the UI can display it
+    throw error; 
   }
 };
 
@@ -47,7 +46,7 @@ export const submitReview = async (rating, message) => {
     formData.append("rating", rating);
     formData.append("message", message);
 
-    const response = await fetch("http://localhost:8000/review", {
+    const response = await fetch("https://r7e26yh8attznp-8000.proxy.runpod.net/review", {
       method: "POST",
       body: formData,
     });

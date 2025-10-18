@@ -39,7 +39,7 @@ function AboutDocs() {
       {/* Hero / Intro */}
       <section className="hero-section">
         <h1 className="main-title">About</h1>
-        <p className="subtitle">Here's how the model works</p>
+        <p className="subtitle">Here's how Face Portal works</p>
       </section>
 
       {/* Docs Layout */}

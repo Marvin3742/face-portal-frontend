@@ -3,6 +3,7 @@ import faceShape from "../Images/placeholder.jpg"
 import ImageCard from "../Components/imageCard"
 import { useState, useEffect } from "react"
 import { generateImage, submitReview } from "../Services/api"
+import { Link } from "react-router-dom"
 
 function Home() {
   const [isUploaded, setIsUploaded] = useState(false)
@@ -167,8 +168,8 @@ function Home() {
             {error !== "No errors detected" && (
               <div className="error-message">
                 <p>⚠️ {error}</p>
-                  <button className="generate-another-btn" onClick={handleGenerateAnother}>
-                  Generate Another
+                  <button className="generate-btn" onClick={handleGenerateAnother}>
+                    Try again...
                   </button>
               </div>
             )}
@@ -189,6 +190,12 @@ function Home() {
             {/* Post-generation actions */}
             {generatedImage && (
               <div className="post-actions">
+                <p>
+                  Not what you expected?{' '}
+                  <a href="/contact" className="learn-more-link" >
+                    Check out what might've gone wrong.
+                  </a>
+                </p>
                 <button className="download-btn" onClick={handleDownload}>
                   Download Image
                 </button>
@@ -197,11 +204,13 @@ function Home() {
                 </button>
 
                 {/* Review form */}
-                <div className="review-section">
-                  <h3>Rate your generated image</h3>
+                <div className="input-container">
+                  
                   {reviewSubmitted ? (
                     <p>Thanks for your feedback!</p>
                   ) : (
+                    <>
+                    <h3>User Feedback</h3>
                     <form onSubmit={handleReviewSubmit} className="review-form">
                       <div className="star-rating">
                         {[1, 2, 3, 4, 5].map((star) => (
@@ -215,14 +224,15 @@ function Home() {
                         ))}
                       </div>
                       <textarea
-                        placeholder="Leave a short review..."
+                        placeholder="Help us improve our models by sharing your feedback..."
                         value={reviewMessage}
                         onChange={(e) => setReviewMessage(e.target.value)}
                       />
                       <button type="submit" className="submit-review-btn">
-                        Submit Review
+                        Submit Feedback
                       </button>
                     </form>
+                    </>
                   )}
                 </div>
               </div>
@@ -248,6 +258,17 @@ function Home() {
               </label>
             </div>
             <ImageCard image={faceShape} />
+
+            <div className="tips-section">
+              <h3>For Best Results</h3>
+              <ul>
+                <li>Upload a high quality picture, preferably a professional headshot.</li>
+                <li>Remove glasses, hats, or anything covering your face.</li>
+                <li>Centered, front-facing poses work best.</li>
+                <li>Choose a solid background. Avoid complex environments.</li>
+                <li>Avoid multiple faces in the image.</li>
+              </ul>
+            </div>
           </>
         )}
       </div>

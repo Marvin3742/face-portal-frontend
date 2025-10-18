@@ -11,8 +11,18 @@ function Contact(){
 
     const faqs = [
         {
+            question: "Why does my generated image suck?",
+            answer: "Several factors can greatly affect quality: wearing glasses, complex backgrounds, low lighting, low-quality images. For the best results we strongly recommend you submit a high quality image like a professional headshot or well-lit selfie. For more information check out our limitations section in the about page!"
+        },
+
+        {
             question: "Is my photo stored or shared?",
-            answer: "No, your privacy is our priority. All photos are processed locally and automatically deleted after generation. We don't store your images or share them with third parties."
+            answer: "No, your privacy is our priority. All photos are processed locally and automatically deleted after generation. We don't store your images or share them with third parties. Face Portal is open-source, check out the official Github to see for yourself."
+        },
+
+        {
+            question: "How long does it take to generate results?",
+            answer: "Processing typically takes 20-40 seconds depending on image size and complexity. Certain images however, can be processed in as fast as 10 seconds or take as long as a full minute."
         },
 
         {
@@ -23,10 +33,7 @@ function Contact(){
             question: "What photo formats are supported?",
             answer: "We support JPG, JPEG, and PNG formats. For best results, use a clear, front-facing photo with good lighting and minimal shadows."
         },
-        {
-            question: "How long does it take to generate results?",
-            answer: "Processing typically takes 15-30 seconds depending on image size and complexity. Larger images may take slightly longer to process."
-        },
+
         {
             question: "Can I use photos of other people?",
             answer: "You should only upload photos that you have permission to use. We recommend using your own photos or photos you have explicit consent to process."
@@ -35,10 +42,7 @@ function Contact(){
             question: "What age ranges can the AI predict?",
             answer: "Our model can age faces forward or backward by 10-20 years. The accuracy tends to be higher for moderate age changes (10-15 years) compared to extreme changes."
         },
-        {
-            question: "Why doesn't my result look realistic?",
-            answer: "Several factors can affect quality: photo lighting, angle, resolution, or facial obstructions. For the best results we strongly recommend uploading a high quality front facing selfie free of any glasses or hats."
-        },
+
     ]
 
     return(
@@ -84,7 +88,7 @@ function Contact(){
                     <div className="bio-text">
                     <h2>About the Developer</h2>
                     <p>
-                        Hi, my name is Marvin Guerrero-Rangel and I am a student with a focus in data science and artificial intelligence. I'm passionate about exploring the latest developments in the field and leveraging them to engineer powerful solutions to meaningful problems. I’m always eager to learn, collaborate, and grow. If you have suggestions for this project or would simply like to connect, please feel free to reach out using the contact information below.
+                        Hi, my name is Marvin Guerrero-Rangel, I am a computer science student at the University of South Florida with a passion for deep learning and artificial intelligence. I love exploring the latest developments in the field and leveraging them to engineer powerful solutions to meaningful problems. I’m always eager to learn, collaborate, and grow. If you have any suggestions for this project or would simply like to connect, please feel free to reach out using the contact information below.
                     </p>
                     </div>
                 </div>
