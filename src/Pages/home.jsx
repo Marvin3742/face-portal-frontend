@@ -1,5 +1,5 @@
 import "../css/home.css"
-import faceShape from "../Images/faceShape.jpeg"
+import faceShape from "../Images/placeholder.jpg"
 import ImageCard from "../Components/imageCard"
 import { useState, useEffect } from "react"
 import { generateImage, submitReview } from "../Services/api"

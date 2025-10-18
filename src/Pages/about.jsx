@@ -1,14 +1,14 @@
 import "../css/about.css"
 import gan_arch from "../Images/vanilla_gan_arch.png"
-import val_func from "../Images/gan_value_function.png"
+import val_func from "../Images/gan_loss.png"
 import style_gan_arch from "../Images/stylegan_arch.png"
 import latent_gif from "../Images/latent_man.gif"
-import optim_func from "../Images/optimization_func.png"
-import learning_func from "../Images/learning_based.png"
+import optim_func from "../Images/optim_func.png"
+import learning_func from "../Images/learning_func.png"
 import { useEffect, useState } from "react"
 
 function AboutDocs() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   useEffect(() => {
     const sections = document.querySelectorAll(".docs-section");
@@ -52,7 +52,7 @@ function AboutDocs() {
             ☰ Docs Menu
           </button>
           <nav>
-            <ul onClick={() => setMenuOpen(false)}>
+            <ul onClick={() => setMenuOpen(true)}>
               <li><a href="#overview">Overview</a></li>
               <li><a href="#gan-arch">GAN Architecture</a></li>
               <li><a href="#stylegan">StyleGAN</a></li>
@@ -264,15 +264,15 @@ function AboutDocs() {
           <section id="references" className="docs-section">
             <h2>References</h2>
             <p>
-              [1] I. Goodfellow et al., “Generative Adversarial Networks,” arXiv, 2014. doi:10.48550/arXiv.1406.2661.
+              [1] <a href="https://arxiv.org/abs/1406.2661" target="_blank" rel="noopener noreferrer" >I. Goodfellow et al., "Generative Adversarial Networks," arXiv, 2014. doi:10.48550/arXiv.1406.2661.</a>
               <br />
-              [2] T. Karras, S. Laine, and T. Aila, “A Style-Based Generator Architecture for Generative Adversarial Networks,” arXiv preprint arXiv:1812.04948, 2019. doi: 10.48550/arXiv.1812.04948.
+              [2] <a href="https://arxiv.org/abs/1812.04948" target="_blank" rel="noopener noreferrer" >T. Karras, S. Laine, and T. Aila, "A Style-Based Generator Architecture for Generative Adversarial Networks," arXiv preprint arXiv:1812.04948, 2019. doi: 10.48550/arXiv.1812.04948.</a>
               <br />
-              [3] Y. Shen, C. Yang, X. Tang, and B. Zhou, “InterFaceGAN: Interpreting the Disentangled Face Representation Learned by GANs,” arXiv preprint arXiv:2005.09635, 2020.
+              [3] <a href="https://arxiv.org/abs/2005.09635" target="_blank" rel="noopener noreferrer" >Y. Shen, C. Yang, X. Tang, and B. Zhou, "InterFaceGAN: Interpreting the Disentangled Face Representation Learned by GANs," arXiv preprint arXiv:2005.09635, 2020.</a>
               <br />
-              [4] W. Xia, Y. Zhang, Y. Yang, J.-H. Xue, B. Zhou, and M.-H. Yang, “GAN Inversion: A Survey,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 45, no. 3, pp. 3121–3138, 2022. doi: 10.1109/TPAMI.2022.3181070.
+              [4] <a href="https://doi.org/10.1109/TPAMI.2022.3181070" target="_blank" rel="noopener noreferrer" >W. Xia, Y. Zhang, Y. Yang, J.-H. Xue, B. Zhou, and M.-H. Yang, "GAN Inversion: A Survey," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 45, no. 3, pp. 3121–3138, 2022. doi: 10.1109/TPAMI.2022.3181070.</a>
               <br />
-              [5] O. Tov, Y. Alaluf, Y. Nitzan, O. Patashnik, and D. Cohen-Or, “Designing an Encoder for StyleGAN Image Manipulation,” ACM Transactions on Graphics, vol. 40, no. 4, pp. 1-14, Jul. 2021. doi: 10.1145/3450626.3459838.
+              [5] <a href="https://doi.org/10.1145/3450626.3459838" target="_blank" rel="noopener noreferrer" >O. Tov, Y. Alaluf, Y. Nitzan, O. Patashnik, and D. Cohen-Or, "Designing an Encoder for StyleGAN Image Manipulation," ACM Transactions on Graphics, vol. 40, no. 4, pp. 1-14, Jul. 2021. doi: 10.1145/3450626.3459838.</a>
             </p>
           </section>
 
