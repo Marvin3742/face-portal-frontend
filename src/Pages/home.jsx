@@ -190,12 +190,7 @@ function Home() {
             {/* Post-generation actions */}
             {generatedImage && (
               <div className="post-actions">
-                <p>
-                  Not what you expected?{' '}
-                  <a href="/contact" className="learn-more-link" >
-                    Check out what might've gone wrong.
-                  </a>
-                </p>
+
                 <button className="download-btn" onClick={handleDownload}>
                   Download Image
                 </button>
@@ -235,6 +230,11 @@ function Home() {
                     </>
                   )}
                 </div>
+                  <p> Not what you expected?{' '}
+                    <a href="/contact" className="learn-more-link" >
+                      Check out what might've gone wrong.
+                    </a>
+                  </p>
               </div>
             )}
           </>
