@@ -178,7 +178,7 @@ function Home() {
             {/* Status indicator */}
             {imageLoading && (
               <div className="loading-indicator">
-                <p>Generating your image, please wait...</p>
+                <p>Generating your image, please wait. This process can take up to 2 minutes...</p>
               </div>
             )}
 

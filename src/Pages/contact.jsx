@@ -22,7 +22,7 @@ function Contact(){
 
         {
             question: "How long does it take to generate results?",
-            answer: "Processing typically takes 20-40 seconds depending on image size and complexity. Certain images however, can be processed in as fast as 10 seconds or take as long as a full minute."
+            answer: "Processing typically takes 40-60 seconds depending on image size and complexity. Certain images however, can be processed in as fast as 20 seconds or take as long as 2 minutes."
         },
 
         {
