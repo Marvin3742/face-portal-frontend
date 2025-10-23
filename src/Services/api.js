@@ -11,7 +11,7 @@ export const generateImage = async (configs) => {
   formData.append("age_factor", ageFactor);
 
   try {
-    const response = await fetch("https://melstiwjqunzvg-8000.proxy.runpod.net/generate", {
+    const response = await fetch("https://iinqnrj9fx6x6k-8000.proxy.runpod.net/generate", {
       method: "POST",
       body: formData,
     });
@@ -46,7 +46,11 @@ export const submitReview = async (rating, message) => {
     formData.append("rating", rating);
     formData.append("message", message);
 
+<<<<<<< HEAD
     const response = await fetch("https://melstiwjqunzvg-8000.proxy.runpod.net/review", {
+=======
+    const response = await fetch("https://iinqnrj9fx6x6k-8000.proxy.runpod.net/review", {
+>>>>>>> 4b9f499 (api)
       method: "POST",
       body: formData,
     });
